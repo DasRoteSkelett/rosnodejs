@@ -5,7 +5,7 @@
 
 ## Start a node
 ```js
-const rosnodejs = require('rosnodejs');
+const rosnodejs = require('@rethink-robotics/rosnodejs');
 rosnodejs.initNode('/my_node')
 .then(() => {
   // do stuff
@@ -66,12 +66,12 @@ $ catkin build
 ```
 - `loadAllPackages()` - One-time "build" call available through `rosnodejs` for versions of ROS before Kinetic and Node.js v6+. Should be called separately and in advance of processes attempting to use messages.
 ```js
-const rosnodejs = require('rosnodejs');
+const rosnodejs = require('@rethink-robotics/rosnodejs');
 rosnodejs.loadAllPackages();
 ```
 - On the fly - all versions of ROS and Node.js 4.5+. When generating on the fly, messages can not be required until the node has initialized.
 ```js
-const rosnodejs = require('rosnodejs');
+const rosnodejs = require('@rethink-robotics/rosnodejs');
 rosnodejs.initNode('my_node', { onTheFly: true }).then(() => {
   const stdMsgs = rosnodejs.require('std_msgs');
   ...

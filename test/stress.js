@@ -1,7 +1,7 @@
 
 const chai = require('chai');
 const xmlrpc = require('xmlrpc-rosnodejs');
-const rosnodejs = require('rosnodejs');
+const rosnodejs = require('@rethink-robotics/rosnodejs');
 
 const TOPIC = '/topic';
 const TYPE = 'std_msgs/String';
